@@ -4,18 +4,13 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { TodoAddComponent } from './todo-add/todo-add.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
-
-
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     TodoListComponent,
     TodoListItemComponent,
-    TodoAddComponent
+    TodoAddComponent,
   ],
   exports: [
     TodoListComponent,
