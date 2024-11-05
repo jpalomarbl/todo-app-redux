@@ -3,7 +3,7 @@ import { Action, createReducer, on } from "@ngrx/store";
 import { TodoDTO } from "./models/todo.dto";
 import * as actions from "./todo.actions";
 
-export const initialState: TodoDTO[] = [];
+export const initialState: TodoDTO[] = [new TodoDTO('Hola')];
 
 const _todoReducer = createReducer(
   initialState,

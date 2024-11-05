@@ -1,1 +1,29 @@
-<p>todo-list-item works!</p>
+<!-- EDIT Mode -->
+
+<div class="container mt-2" *ngIf="isEditing">
+  <div class="row">
+    <div class="col-4">
+      <input class="form-control hidden" type="text" class="form-control" [formControl]="titleInput">
+    </div>
+
+    <div class="col-8">
+      <button class="btn btn-primary ms-2" type="button" (click)="submitTask()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!-- READ Mode -->
+
+<div class="container mt-2" *ngIf="!isEditing">
+  <div class="row">
+    <div class="col-4">
+      {{ todo.title }}
+    </div>
+
+    <div class="col-8">
+      <button class="btn btn-success" type="button" (click)="completeTask()">Done</button>
+      <button class="btn btn-primary ms-2" type="button" (click)="editTask()">Edit</button>
+      <button class="btn btn-danger ms-2" type="button" (click)="deleteTask()">Delete</button>
+    </div>
+  </div>
+</div>
