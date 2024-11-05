@@ -7,13 +7,15 @@ export const createTodo = createAction(
 
 export const editTitle = createAction(
   '[TODO] Edit title',
-  props<{ title: string }>()
+  props<{ id: number, title: string }>()
 );
 
-export const finishTodo = createAction(
-  '[TODO] Finish Todo'
+export const completeTodo = createAction(
+  '[TODO] Complete Todo',
+  props<{ id: number }>()
 );
 
 export const deleteTodo = createAction(
-  '[TODO] Delete Todo'
+  '[TODO] Delete Todo',
+  props<{ id: number }>()
 );
