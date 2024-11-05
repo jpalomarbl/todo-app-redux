@@ -1,1 +1,8 @@
-<p>todo-add works!</p>
+<div class="container mt-5">
+  <div class="input-group mb-3">
+    <input class="form-control" type="text" placeholder="Insert title for task..." [formControl]="titleInput">
+    <div class="input-group-append">
+      <button class="btn btn-success" (click)="addTodoTask()">Add task</button>
+    </div>
+  </div>
+</div>
