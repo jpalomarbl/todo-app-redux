@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "Hacer la compra",
+    "done": false
+  },
+  {
+    "id": 2,
+    "title": "Llamar al médico",
+    "done": true
+  },
+  {
+    "id": 3,
+    "title": "Preparar la reunión del equipo",
+    "done": false
+  },
+  {
+    "id": 4,
+    "title": "Enviar correos pendientes",
+    "done": true
+  },
+  {
+    "id": 5,
+    "title": "Limpiar la casa",
+    "done": false
+  },
+  {
+    "id": 6,
+    "title": "Revisar proyecto final",
+    "done": false
+  },
+  {
+    "id": 7,
+    "title": "Actualizar el currículum",
+    "done": true
+  },
+  {
+    "id": 8,
+    "title": "Hacer ejercicio",
+    "done": false
+  },
+  {
+    "id": 9,
+    "title": "Leer un capítulo del libro",
+    "done": true
+  },
+  {
+    "id": 10,
+    "title": "Cocinar para la semana",
+    "done": false
+  }
+]
