@@ -17,7 +17,6 @@ export class TodosEffects {
       mergeMap(() =>
         this.todoService.getAllTodos().pipe(
           map((todos) => {
-            console.log('Effect ', todos);
             return actions.getAllSuccess({ todos: todos })
           }),
           catchError((err) => of(actions.getAllError({ payload: err })))
