@@ -21,7 +21,6 @@ export const initialState: TodoState = {
 
 const _todoReducer = createReducer(
   initialState,
-  // on(actions.createTodo, (state, { title }) => [...state, new TodoDTO(title)]),
   on(actions.createTodo, (state, { title }) => ({
     ...state,
     loading: false,
@@ -29,17 +28,6 @@ const _todoReducer = createReducer(
     todos: [...state.todos, new TodoDTO(title)],
   })),
   on(actions.completeTodo, (state, { id }) => ({
-    // return state.map((todo) => {
-    //   if (todo.id === id) {
-    //     return {
-    //       ...todo,
-    //       done: true,
-    //     };
-    //   } else {
-    //     return todo;
-    //   }
-    // });
-
     ...state,
     loading: false,
     loaded: false,
@@ -57,17 +45,6 @@ const _todoReducer = createReducer(
     ],
   })),
   on(actions.editTitle, (state, { id, title }) => ({
-    // return state.map((todo) => {
-    //   if (todo.id === id) {
-    //     return {
-    //       ...todo,
-    //       title: title,
-    //     };
-    //   } else {
-    //     return todo;
-    //   }
-    // });
-
     ...state,
     loading: false,
     loaded: false,
@@ -85,8 +62,6 @@ const _todoReducer = createReducer(
     ],
   })),
   on(actions.deleteTodo, (state, { id }) => ({
-    // return state.filter((todo) => todo.id !== id);
-
     ...state,
     loading: false,
     loaded: false,
@@ -94,8 +69,6 @@ const _todoReducer = createReducer(
   })),
   on(actions.getAll, (state) => ({ ...state, loading: true })),
   on(actions.getAllSuccess, (state, { todos }) => {
-    console.log('Reducer ', todos);
-
     return {
     ...state,
     loading: false,
